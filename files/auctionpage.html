@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>you are online</title>
+        <link rel="stylesheet" href="style/auctionpage.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="info">
+            <div class="imag">
+                <img src="image/car.jpg" width="250" height="180" style="object-fit: cover; margin: auto; border-radius: 20px;">
+            </div>
+
+            <div class="detail"> 
+
+                <div style="display: flex; flex-wrap: wrap;"> 
+                    <label>Name:</label>
+                    <text class="information">Kashayp Amble</text>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap;"> 
+                    <label>User ID:</label>
+                    <text class="information">kashyap32uu</text>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap;"> 
+                    <label>Year of studying:</label>
+                    <text class="information">3rd</text>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap;"> 
+                    <label>Phone NO:</label>
+                    <text class="information" id="test">9535075439</text>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; margin-top: 50px;">
+            <div class="leftinfo" style="text-align: center;">
+                <button style='font-size:24px;' class="iconbtn" onclick="subtract()"><i class="fas fa-minus"></i></button>
+                <input type="number" id="bidvalue">
+                <button style='font-size:24px;' class="iconbtn" onclick="add()"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="rightinfo"> 
+                <select>
+                    <option name="teams">teams dfa  adfasdf asfasf asdf </option>
+                    <option name="teams">teams</option>
+                    <option name="teams">teams</option>
+                    <option name="teams">teams</option>
+                    <option name="teams">teams</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-success rightfloat">Sell</button>
+
+    </body>
+</html>
+
+<script>
+    var valueint = document.getElementById("bidvalue").value;
+
+    function add(){
+        var addvalue = 10;
+        valueint = Number(valueint) + Number(addvalue);
+        document.getElementById("test").innerHTML = valueint;
+    }
+
+    function subtract(){
+        var sub = 20 ;
+        valueint = Number(valueint) - Number(sub);
+        document.getElementById("test").innerHTML = valueint;
+    }
+</script>

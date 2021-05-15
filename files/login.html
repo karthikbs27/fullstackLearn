@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style/login.css">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <div class="imgcontainer">
+    <img src="image/cricket.jpeg" alt="Avatar" class="avatar">
+  </div>
+  <h2>Login</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="UserID" name="usrid">
+  </div>
+
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" id="myInput" type="password" placeholder="Password" name="psw">
+  </div>
+
+  <input type="checkbox" onclick="myFunction()">Show Password
+
+  <button type="submit" class="btn" style="margin-top: 40px;">Register</button>
+</form>
+
+<div class="bottom">
+  <ui>
+      <li class="link">Don't have an account?  <a href="#"> register account</a></li>
+      <li class="link" style="float: right;">  <text style="margin-right: 5px;">forgot</text><a href="#" style="float: right;">password?</a></li>
+
+  </ui>
+</div>
+
+</body>
+</html>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>

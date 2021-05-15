@@ -1,0 +1,146 @@
+*{margin: 0px; padding: 0px; border: 0px; box-sizing: border-box; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+.navigationbar{
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 3px #999;
+}
+
+.but{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li {
+    padding: 10px;
+    display: inline-block;
+    margin: 0px 6px;
+    transition: 0.5ms;
+    color: black;
+}
+ul li :hover{
+    color: rgba(0, 0, 0, 0.699);
+}
+
+ul li a h4 {
+    padding: 0px 15px;
+    color: black;
+}
+
+.chip {
+    margin: auto;
+}
+
+.ooo{
+    float: right;
+    padding-bottom: 0px;
+}
+  
+  
+.chip img {
+    float: left;
+    margin: auto; 
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left{
+    margin-top: 20px;
+    width: 75%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+.right{
+    margin-top: 20px;
+    width: 25%;
+    float: right;
+    border-left: 1px solid #999;
+    min-height: 500px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.headteam{
+    margin: auto;
+    font-size: 25px;
+}
+
+#memsearch{
+    padding: 7px;
+    border-radius: 50px;
+    width: 70%;
+    border: 1px solid #666;
+    border-style: hidden;
+    background-color: #ddd;
+}
+
+#memsearch:focus, select:focus{
+    border: none;
+    background-color: #333;
+    color: white;
+    border-style: hidden;
+    box-shadow: none;
+    border-radius: 50px;
+    outline: none;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-decoration{
+    -webkit-appearance: none;
+}
+
+.graph{ 
+    justify-self: center;
+    border: 1px solid #999;
+}
+
+.fa-plus:hover{
+    color: white;
+}
+
+.tablestyle{
+    margin: auto;
+    margin-top: 30px;
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #999;
+    text-align: center;
+}
+
+table tr th{
+    background-color: #3385ff;
+    text-align: center;
+    border-spacing: 0px;
+    padding: 7px 0px;
+    color: white;
+}
+
+table tr td{
+
+    padding: 7px;
+    border: 1px solid #999;
+}
+
+tr{
+    background-color: white;
+}
+.tabbut:hover{
+    background-color: #666;
+    color: white;
+    cursor: pointer;    
+}
+
+tr:nth-child(odd) {
+    background-color: #d9d9d9;
+}

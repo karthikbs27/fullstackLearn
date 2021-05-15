@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+}
+
+body{
+    padding: 70px;
+}
+
+
+.info{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    background-color: #333;
+    color: white;
+    border-radius: 40px;
+}
+
+.detail > div{
+    margin: 15px;
+    margin-left: 40px;
+}
+
+
+input[type=number]{
+    font-size: 30px;
+    outline: none;
+    width: 50%;
+}
+
+.imag{
+    width: 35%;  
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.leftinfo{
+    width: fit-content;
+    flex: 55%;
+}
+
+.detail{
+    width: 75%;
+    border-radius: 40px;
+}
+
+.rightinfo{
+    width:fit-content;
+    flex: 45%;
+    text-align: center;
+    border-left: 1px solid #999;
+    padding: 10px;
+}
+
+select{
+    margin: 10px;
+}
+
+.submitbtn{
+    float: right;
+
+}
+
+.iconbtn{
+    border: 3px solid #3385ff;
+    border-radius: 10px;
+    background-color: #3385ff;
+    color:white;
+    padding: 10px 15px;
+    margin: auto 20px;
+}
+
+select{
+    padding: 7px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: #3385ff;
+    margin: auto;
+    width: 60%;
+}
+
+select:hover{
+    cursor: pointer;
+}
+
+.rightfloat{
+    float: right;
+}
+
+label{
+    flex: 10%;
+}
+
+.information{
+    flex: 40%;
+}

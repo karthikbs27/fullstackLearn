@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>logged in</title>
+        <link rel="stylesheet" href="style/playerlogged.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+    </head>
+
+    <body>
+        <div class="navigationbar">
+            <ul>
+                <li><a href="#" class="but"><h4>Team</h4></a></li>
+                <li><a href="#" class="but"><h4>Statistics</h4></a></li>
+                <li><a href="#" class="but"><h4>Auction</h4></a></li>
+                <li class="ooo"><a href="#" class="but">
+                    <div class="chip">
+                        <img src="image/akshay.jpeg" alt="Person" width="96" height="96">
+                    </div>
+                </a></li>
+                <li class="ooo" style="display: none;"><a href="#" class="but"><button type="button" class="btn btn-danger"><i class="fa fa-plus" style="margin-right: 10px;"></i>Create team</button></a></li>
+                <li style="float: right; cursor: pointer;"><a href="#tableo" class="but"><h4 style="color: #e60000;">Team phenix</h4></a></li>
+                
+            
+            </ul>
+        </div>
+
+        <div class="graphdiv" style="width: 100%; text-align: center; padding: 40px 100px;">
+            <h2 style="float: left;">The Bid on players</h2>
+            <canvas class="graph" id="shish" width="200" height="50" ></canvas>            
+        </div>
+
+        <div class="tablediv" style="padding: 40px 100px; margin-bottom: 100px;">
+
+            <text style="float: left;"><h2>Members</h2></text><br>
+            <table class="tablestyle" id="tableo" style="margin-top: 30px;">
+                <tr>
+                    <th style="width: 40%;">Name</th>
+                    <th style="width: 39%;">UserID</th> 
+                    <th style="width: 7%;">Year</th>
+                    <th style="width: 7%;"></th>
+                </tr>
+                <tr>
+                    <td>Akshay V Nayak</td>
+                    <td>Vakshay</td>
+                    <td>4</td>
+                    <td onclick="del()" class="tabbut">Delete</td>
+                </tr>
+                <tr>
+                    <td>Akshay V Nayak</td>
+                    <td>Vakshay</td>
+                    <td>4</td>
+                    <td onclick="del()" class="tabbut">Delete</td>
+                </tr>
+                <tr>
+                    <td>Akshay V Nayak</td>
+                    <td>Vakshay</td>
+                    <td>4</td>
+                    <td onclick="del()" class="tabbut">Delete</td>
+                </tr>
+                <tr>
+                    <td>Akshay V Nayak</td>
+                    <td>Vakshay</td>
+                    <td>4</td>
+                    <td onclick="del()" class="tabbut">Delete</td>
+                </tr>
+            </table>
+        </div>
+
+        
+
+        
+    </body>
+
+    
+</html>
+
+<script>
+
+  /*  var canvas = document.getElementById("graph");
+    var ctx = canvas.getContext("2d");
+    ctx.font = "20px Arial";
+    ctx.fillText("Graph",10,20);
+
+
+    var num = 5;
+    var wid = 30;
+    var begin = 300;
+    for(i= 0; i < num; i++){
+        
+        var plan = canvas.getContext("2d");
+        plan.setLineDash([3, 3]);//dashes are 5px and spaces are 3px
+        plan.beginPath();
+        plan.moveTo(100, begin);
+        plan.lineTo(1150, begin);
+        plan.stroke();
+        begin = begin - wid;
+    }*/
+
+    
+    var ctx = document.getElementById('shish');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['pavan', 'akshay', 'kashyap', 'monish', 'sanchay', 'shivraj', 'ranganath','viranchi','rupesh', 'sujith'],
+            datasets: [{
+                label: 'The highest bid',
+                data: [12, 4, 3, 5, 2, 3,1,2],
+                backgroundColor: [
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff'
+                ],
+                borderColor: [
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff',
+                    '#3385ff'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
