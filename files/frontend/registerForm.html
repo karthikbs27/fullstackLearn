@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <form style="width: 500px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 2px solid #999; padding: 10px 30px; border-radius: 5px;">
+        <form  class="register form" style="left: 50%;"> 
             
             <div class="imgcontainer">
                 <i class="fa fa-plus-square fa-5x icon"></i>
@@ -45,8 +45,30 @@
                 <input class="input-field" type="text" placeholder="phone No" name="phoneno">
             </div>
 
-            <button class="button">continue</button>
+            <button class="button" onclick="passformappear()">continue</button>
 
+        </form>
+
+    
+        <form class="password form" id="shish22"> 
+            <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input class="input-field" type="password" placeholder="Enter Password" name="password" id="password1">
+            </div>
+
+            <div class="input-container">
+                <i class="fa fa-unlock-alt icon"></i>
+                <input class="input-field" type="password" placeholder="Re-Enter Password" id="password2" onkeyup="validatepass()">
+            </div>
+
+            <text id="invalid" style="display: none"> Password not matching. </text>
+
+            <div class="input-container">
+                <i class="fa fa-mobile icon"></i>
+                <input class="input-field" type="number" placeholder="Enter OTP" id="otp" name="otp">
+            </div>
+
+            <button class="button">Register</button>    
         </form>
     </body>
 
@@ -54,3 +76,4 @@
 
 <script src = "js/registerForm.js"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
