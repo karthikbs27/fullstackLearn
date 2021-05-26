@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; overflow: hidden;
 }
 
 .input-container{
@@ -35,7 +35,7 @@ img.avatar, .imgcontainer > i{
 
 .input-field {
   width: 100%;
-  padding: 10px;
+  padding: 0px 10px;
   outline: none;
 }
 
@@ -92,13 +92,17 @@ img.avatar, .imgcontainer > i{
 }
 
 .form {
-  width: 500px; 
-  position: absolute; 
-  top: 50%; 
-  transform: translate(-50%, -50%); 
-  border: 2px solid #999; 
+  width: 100%; 
   padding: 10px 30px; 
-  border-radius: 5px;
+}
+
+.formdiv{
+  width:500px; 
+  position: absolute; 
+  top: 50%;  
+  transform: translate(-50%, -50%);  
+  padding: 20px 30px;
+  transition: 1s;
 }
 
 #otp::-webkit-inner-spin-button,

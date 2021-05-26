@@ -9,71 +9,83 @@
     </head>
 
     <body>
-        <form  class="register form" style="left: 50%;"> 
+
+        <div class="formdiv" id="reg" style="left: 50%;">
+            <form  class="register form" style="left: 50%;"> 
             
-            <div class="imgcontainer">
-                <i class="fa fa-plus-square fa-5x icon"></i>
-                <img src="image/cricket.jpeg" alt="Avatar" class="avatar" style="display: none;">
-            </div>
+                <div class="imgcontainer">
+                    <i class="fa fa-plus-square fa-5x icon"></i>
+                    <img src="image/cricket.jpeg" alt="Avatar" class="avatar" style="display: none;">
+                </div>
+            
+                <h2 style="margin-bottom: 20px;">REGISTER</h2>
+    
+    
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input class="input-field" type="text" placeholder="Name" name="name">
+                </div>
+    
+    
+                <div class="input-container">
+                    <i class="fa fa-street-view icon"></i>
+                    <input class="input-field" type="number" placeholder="age" name="age">
+                </div>
+    
+                <div class="input-container">
+                    <i class="fa fa-graduation-cap icon"></i>
+                    <input class="input-field" type="number" placeholder="year" name="year">
+                </div>
+    
+                <div class="input-container">
+                    <i class="fa fa-bed icon"></i>
+                    <input class="input-field" type="text" placeholder="Room No" name="roomno">
+                </div>
+    
+                <div class="input-container">
+                    <i class="fa fa-phone icon"></i>
+                    <input class="input-field" type="number" placeholder="phone No" name="phoneno">
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-envelope icon"></i>
+                    <input class="input-field" type="email" placeholder="Email ID" name="email">
+                </div>
+                <text id="invalid1" style="display: none; color: tomato;"> The above field is empty. </text>
+            </form>
+            <button class="button" onclick="next()">continue</button>
+        </div>
         
-            <h2 style="margin-bottom: 20px;">REGISTER</h2>
 
-
-            <div class="input-container">
-                <i class="fa fa-user icon"></i>
-                <input class="input-field" type="text" placeholder="Name" name="name">
-            </div>
-
-
-            <div class="input-container">
-                <i class="fa fa-street-view icon"></i>
-                <input class="input-field" type="number" placeholder="age" name="age">
-            </div>
-
-            <div class="input-container">
-                <i class="fa fa-graduation-cap icon"></i>
-                <input class="input-field" type="number" placeholder="year" name="year">
-            </div>
-
-            <div class="input-container">
-                <i class="fa fa-bed icon"></i>
-                <input class="input-field" type="text" placeholder="Room No" name="roomno">
-            </div>
-
-            <div class="input-container">
-                <i class="fa fa-phone icon"></i>
-                <input class="input-field" type="text" placeholder="phone No" name="phoneno">
-            </div>
-
-            <button class="button" onclick="passformappear()">continue</button>
-
-        </form>
+        <div class="formdiv" id="pas" style="left: 150%;">
+            <form class="password form" id="shish22"> 
+                <div class="input-container">
+                    <i class="fa fa-key icon"></i>
+                    <input class="input-field" type="password" placeholder="Enter Password" name="password" id="password1">
+                </div>
+    
+                <div class="input-container">
+                    <i class="fa fa-unlock-alt icon"></i>
+                    <input class="input-field" type="password" placeholder="Re-Enter Password" id="password2" onkeyup="validatepass()">
+                </div>
+    
+                <text id="invalid" style="display: none; color: tomato;"> Password not matching. </text>
+    
+                <div class="input-container" style="margin-top: 20px;">
+                    <i class="fa fa-mobile icon"></i>
+                    <input class="input-field" type="number" placeholder="Enter OTP" id="otp" name="otp">
+                </div>
+            </form>
+            <button class="button">Register</button>
+        </div>
+        
 
     
-        <form class="password form" id="shish22"> 
-            <div class="input-container">
-                <i class="fa fa-key icon"></i>
-                <input class="input-field" type="password" placeholder="Enter Password" name="password" id="password1">
-            </div>
-
-            <div class="input-container">
-                <i class="fa fa-unlock-alt icon"></i>
-                <input class="input-field" type="password" placeholder="Re-Enter Password" id="password2" onkeyup="validatepass()">
-            </div>
-
-            <text id="invalid" style="display: none"> Password not matching. </text>
-
-            <div class="input-container">
-                <i class="fa fa-mobile icon"></i>
-                <input class="input-field" type="number" placeholder="Enter OTP" id="otp" name="otp">
-            </div>
-
-            <button class="button">Register</button>    
-        </form>
+        
     </body>
 
 </html>
 
 <script src = "js/registerForm.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
