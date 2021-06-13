@@ -11,7 +11,8 @@
     <body>
 
         <div class="formdiv" id="reg" style="left: 50%;">
-            <form  class="register form" style="left: 50%;"> 
+
+            <form id="registerform" class="register form" style="left: 50%;" method="post">
             
                 <div class="imgcontainer">
                     <i class="fa fa-plus-square fa-5x icon"></i>
@@ -58,15 +59,15 @@
         
 
         <div class="formdiv" id="pas" style="left: 150%;">
-            <form class="password form" id="shish22"> 
+            <form class="password form" id="passwordform"> 
                 <div class="input-container">
                     <i class="fa fa-key icon"></i>
-                    <input class="input-field" type="password" placeholder="Enter Password" name="password" id="password1">
+                    <input class="input-field" type="password" placeholder="Enter Password"  id="password1">
                 </div>
     
                 <div class="input-container">
                     <i class="fa fa-unlock-alt icon"></i>
-                    <input class="input-field" type="password" placeholder="Re-Enter Password" id="password2" onkeyup="validatepass()">
+                    <input class="input-field" type="password" placeholder="Re-Enter Password" name="password" id="password2" onkeyup="validatepass()">
                 </div>
     
                 <text id="invalid" style="display: none; color: tomato;"> Password not matching. </text>
@@ -76,16 +77,22 @@
                     <input class="input-field" type="number" placeholder="Enter OTP" id="otp" name="otp">
                 </div>
             </form>
-            <button class="button">Register</button>
+            <button class="button" id="verifybutton" onclick='reg()'>Register</button>
+        </div>
+
+        <div class="loadbox" >
+            <text id="loadtext" style="top: 50%; position: absolute; margin-top:-7px; margin-left: 10px;">shish you .. </text>
+            <div class = "loadicon"></div>
         </div>
         
-
+        
     
         
     </body>
 
 </html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
 <script src = "js/registerForm.js"></script>
 <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
