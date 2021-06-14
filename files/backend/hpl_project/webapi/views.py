@@ -32,7 +32,7 @@ def registerInfo(request):
                 email = request_payload['email'],
                 password = request_payload['password']
             )
-            sendotp(request_payload['email'])
+        
             # user = {'name':mem.name,'age':mem.age, 'year':mem.year, 'room':mem.room, 'phone': mem.phone, 'email': mem.email}
             return JsonResponse({'data' : True })
         else:

@@ -2,24 +2,50 @@
 <head>
     <title>home page</title>
     <link rel="stylesheet" href="style/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="navbar">
         <ul>
             <li><a href="#" class="btn"><h4>Team</h4></a></li>
             <li><a href="#" class="btn"><h4>Statistics</h4></a></li>
-            <li><a href="#" class="btn"><h4>Login</h4></a></li>
-            <li id="searchbar"><input type="search" name="searchinput" id="searchinput" placeholder="search..">
+            <li><a href="#" class="btn"><h4>Contact</h4></a></li>
+            <li id="searchbar"><input type="search" style="width: 100vh;" name="searchinput" id="searchinput" placeholder="search..">
             </input></li>
         </ul>
     </div>
-
-    <div class="bottom">
-        <ui>
-            <li class="link">Don't have an account?  <a href="#"> register account</a></li>
-            <li class="link" style="float: right;">  <text style="margin-right: 5px;">forgot</text><a href="#" style="float: right;">password?</a></li>
-
-        </ui>
+    <div class="flexbar">
+        <div style="flex: 60%; text-align: center">
+            <img src="https://image.freepik.com/free-vector/abstract-batsman-playing-cricket-from-splash-watercolors-illustration-paints_291138-405.jpg" width="350">
+        </div>
+        <div class="login box">
+            <div class="logoption">
+                <text>Login</text>
+            </div>
+            <div class="form userlogin">
+                <form>
+                    <input type="text" name="userid" id="userid" placeholder="Enter user Id">
+                    <input type="password" name="pass" id="pass" placeholder="Enter password">
+                    <label class="container" style="color: white; " onclick="showPassword()">show password
+                        <input type="checkbox" id="checkbox" >
+                        <span class="checkmark" ></span>
+                    </label>
+                </form>
+                <button><text style="color: white; font-weight: bold; font-family: Inconsolata;">Login</text></button>
+            </div>
+            <div class="bottom">
+                <ui>
+                    <li class="link">Don't have an account?  <a href="#"> register account</a></li>
+                    <li class="link" style="float: right;">  <text style="margin-right: 5px;">forgot</text><a href="#" style="float: right;">password?</a></li>
+                </ui>
+            </div>
+        </div>
     </div>
+    
+
+    
 </body>
 </html>
+<script src="js/index.js"></script>
