@@ -4,6 +4,7 @@ from django.db import models
 
 class  putdata(models.Model):
     name = models.CharField(max_length=200, blank=False, null=True)
+    username = models.CharField(max_length=200)
     age = models.IntegerField(blank=False, null=True)
     year = models.IntegerField(blank=False, null=True)
     room = models.CharField(max_length=6, blank=False, null=True)

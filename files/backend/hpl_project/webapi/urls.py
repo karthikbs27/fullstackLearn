@@ -5,4 +5,6 @@ urlpatterns = [
     path('register', registerInfo),
     path('verify', verify),
     path('get/<str:namere>', getdata), 
+    path('sessionID/', checksession),
+    path('nameId', checkforname)
 ]

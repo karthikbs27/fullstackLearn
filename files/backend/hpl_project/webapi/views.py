@@ -25,6 +25,7 @@ def registerInfo(request):
         if request_payload['otp'] == otp:
             mem = putdata.objects.create(
                 name = request_payload['name'],
+                username = request_payload['usname'],
                 age = request_payload['age'],
                 year = request_payload['year'],
                 room = request_payload['roomNo'],
@@ -67,5 +68,22 @@ def sendotp(receiver):
     s.sendmail('noonecan9686@mail.com', receiver, msg)
     print('OTP sent')
     s.quit()
-    
+
+def checksession(request):
+    if request.method == 'POST':
+        request_payload = json.loads(request.POST['data'])
+        print(request_payload)
+        m = putdata.objects.get(name=request_payload['name'])
+        request.session['memID'] = m.id
+        return JsonResponse({'data' : True })
+
+def checkforname(request):
+    if request.method == 'POST':
+        request_payload = json.loads(request.POST['data'])
+        if putdata.objects.filter(username = request_payload['usname']).exists():
+            print(True)
+            return JsonResponse({'data' : True })
+        else:
+            print(False)
+            return JsonResponse({'data': False})
 

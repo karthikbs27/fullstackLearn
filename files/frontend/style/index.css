@@ -84,12 +84,12 @@ input[type=search]::-webkit-search-cancel-button{
 }
 
 .box{
-    width: 500px;
     padding: 20px;
+    width: 500px;
     margin-top: 20px;
     margin-right: 45px;
     background-color: tomato;
-    flex: 40%;
+    float: right;
 }
 
 .logoption{
@@ -104,6 +104,11 @@ input[type=search]::-webkit-search-cancel-button{
 .userlogin{
     padding: 15px 0px;
     border-bottom: 1px solid #444;
+}
+
+img{
+    transform-origin: 50% 0%;
+    margin-left: 20%;
 }
 
 .container {
@@ -180,7 +185,5 @@ button:hover{
 }
 
 .flexbar{
-    display: flex;
-    flex-direction: row;
     width: 100%;
 }

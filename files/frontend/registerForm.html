@@ -4,50 +4,38 @@
         <title>register</title>
         <meta name="viewport" content="width=device-width, initial-scale = 1">
         <link rel="stylesheet" href="style/registerForm.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     </head>
-
     <body>
-
         <div class="formdiv" id="reg" style="left: 50%;">
-
             <form id="registerform" class="register form" style="left: 50%;" method="post">
-            
                 <div class="imgcontainer">
                     <i class="fa fa-plus-square fa-5x icon"></i>
                     <img src="image/cricket.jpeg" alt="Avatar" class="avatar" style="display: none;">
                 </div>
-            
                 <h2 style="margin-bottom: 20px;">REGISTER</h2>
-    
-    
                 <div class="input-container">
                     <i class="fa fa-user icon"></i>
                     <input class="input-field" type="text" placeholder="Name" name="name">
                 </div>
-    
-    
                 <div class="input-container">
                     <i class="fa fa-street-view icon"></i>
                     <input class="input-field" type="number" placeholder="age" name="age">
                 </div>
-    
                 <div class="input-container">
                     <i class="fa fa-graduation-cap icon"></i>
                     <input class="input-field" type="number" placeholder="year" name="year">
                 </div>
-    
                 <div class="input-container">
                     <i class="fa fa-bed icon"></i>
                     <input class="input-field" type="text" placeholder="Room No" name="roomno">
                 </div>
-    
                 <div class="input-container">
                     <i class="fa fa-phone icon"></i>
                     <input class="input-field" type="number" placeholder="phone No" name="phoneno">
                 </div>
-
                 <div class="input-container">
                     <i class="fa fa-envelope icon"></i>
                     <input class="input-field" type="email" placeholder="Email ID" name="email">
@@ -56,42 +44,36 @@
             </form>
             <button class="button" onclick="next()">continue</button>
         </div>
-        
-
         <div class="formdiv" id="pas" style="left: 150%;">
             <form class="password form" id="passwordform"> 
+                <div class="input-container">
+                    <i class="fa fa-id-badge icon"></i>
+                    <input class="input-field" type="text" placeholder="Choose Username" onkeyup="checkforname()" id="username" name="username">
+                </div>
+                <text id="invaliduserid" style="display: none; color: tomato;"> Username is already taken. </text>
                 <div class="input-container">
                     <i class="fa fa-key icon"></i>
                     <input class="input-field" type="password" placeholder="Enter Password"  id="password1">
                 </div>
-    
                 <div class="input-container">
                     <i class="fa fa-unlock-alt icon"></i>
                     <input class="input-field" type="password" placeholder="Re-Enter Password" name="password" id="password2" onkeyup="validatepass()">
                 </div>
-    
                 <text id="invalid" style="display: none; color: tomato;"> Password not matching. </text>
-    
                 <div class="input-container" style="margin-top: 20px;">
                     <i class="fa fa-mobile icon"></i>
                     <input class="input-field" type="number" placeholder="Enter OTP" id="otp" name="otp">
                 </div>
+                <text id="invalid2" style="display: none; color: tomato;"> The above field is empty. </text>
             </form>
-            <button class="button" id="verifybutton" onclick='reg()'>Register</button>
+            <button class="button" id="verifybutton" disabled = 'true' onclick='reg()'>Register</button>
         </div>
-
         <div class="loadbox" >
             <text id="loadtext" style="top: 50%; position: absolute; margin-top:-7px; margin-left: 10px;">shish you .. </text>
             <div class = "loadicon"></div>
-        </div>
-        
-        
-    
-        
+        </div>   
     </body>
-
 </html>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/common.js"></script>
 <script src = "js/registerForm.js"></script>
